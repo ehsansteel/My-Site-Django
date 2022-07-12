@@ -13,6 +13,4 @@ def heme(request):
         time = request.POST.get('time')
         User.objects.create(name=name, email=email, topic=topic, body=body, view=view, time=time)
 
-    logo = User.objects.all().alias()
-
-    return render(request, "heme_app/index.html", context={'login': logo},)
+    return render(request, "heme_app/index.html")
